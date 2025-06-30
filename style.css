@@ -1,4 +1,11 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0a0a1a, #121236);
@@ -6,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-
+/* Navigation */
 nav {
   position: fixed;
   top: 0;
@@ -39,7 +46,7 @@ nav {
   color: #fff;
 }
 
-
+/* Container */
 .container {
   display: flex;
   justify-content: center;
@@ -50,6 +57,8 @@ nav {
   max-width: 1200px;
   margin: auto;
 }
+
+/* Content */
 .content {
   flex: 1 1 450px;
   max-width: 550px;
@@ -60,12 +69,14 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 .content p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #ccc;
   margin-bottom: 2rem;
+  word-wrap: break-word;
 }
 .download-btn {
   background: linear-gradient(135deg, #8a2be2, #9370db);
@@ -81,6 +92,8 @@ nav {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
 }
+
+/* Viewer */
 .viewer-wrapper {
   flex: 1 1 450px;
   max-width: 500px;
@@ -91,7 +104,7 @@ spline-viewer {
   pointer-events: none;
 }
 
-
+/* Projects Section */
 #projects {
   padding: 100px 20px;
   text-align: center;
@@ -101,6 +114,7 @@ spline-viewer {
   font-size: 2.8rem;
   color: #8a2be2;
   margin-bottom: 40px;
+  word-wrap: break-word;
 }
 .projects-container {
   display: flex;
@@ -115,6 +129,8 @@ spline-viewer {
   width: 320px;
   box-shadow: 0 8px 16px rgba(138, 43, 226, 0.3);
   transition: transform 0.3s;
+  color: #eee;
+  text-align: center;
 }
 .project-card:hover {
   transform: translateY(-8px);
@@ -124,13 +140,15 @@ spline-viewer {
 }
 .project-card p {
   margin: 10px 0;
+  word-wrap: break-word;
 }
 .project-card a {
   color: #d0b3ff;
   text-decoration: underline;
+  word-wrap: break-word;
 }
 
-
+/* Quick Stats Section */
 #quick-stats {
   min-height: 100vh;
   padding: 100px 20px;
@@ -144,6 +162,7 @@ spline-viewer {
   font-size: 2.8rem;
   color: #b678ff;
   margin-bottom: 40px;
+  word-wrap: break-word;
 }
 .stats-container {
   display: flex;
@@ -162,17 +181,20 @@ spline-viewer {
   align-items: center;
   border: 1px solid rgba(138, 43, 226, 0.2);
   box-shadow: 0 8px 16px rgba(138, 43, 226, 0.1);
+  color: #d0b3ff;
+  text-align: center;
 }
 .stat-box h3 {
   font-size: 2.5rem;
-  color: #d0b3ff;
+  margin: 0;
 }
 .stat-box p {
   font-size: 1rem;
   color: #e0e0e0;
+  margin: 0;
 }
 
-
+/* Contact Section */
 #contact {
   min-height: 100vh;
   padding: 100px 20px;
@@ -186,6 +208,7 @@ spline-viewer {
   font-size: 2.8rem;
   color: #b678ff;
   margin-bottom: 40px;
+  word-wrap: break-word;
 }
 .contact-cards {
   display: flex;
@@ -204,31 +227,45 @@ spline-viewer {
   align-items: center;
   border: 1px solid rgba(138, 43, 226, 0.2);
   transition: all 0.3s ease;
+  cursor: pointer;
+  color: #8a2be2;
+  text-align: center;
 }
 .contact-card:hover {
   background: rgba(138, 43, 226, 0.12);
   transform: translateY(-8px);
 }
 .contact-card i {
-  color: #8a2be2;
   font-size: 2.2rem;
   margin-bottom: 10px;
-}
-.contact-card p {
-  color: #e0e0e0;
+  color: #8a2be2;  /* اللون البنفسجي الأصلي */
 }
 
-
+/* Responsive */
 @media (max-width: 768px) {
   .container, .stats-container, .contact-cards, .projects-container {
     flex-direction: column;
     align-items: center;
   }
+  .container {
+    width: 100%;
+    padding: 2rem 1rem 4rem;
+  }
   .content h1 {
     font-size: 2.2rem;
+  }
+  spline-viewer {
+    height: 300px;
   }
   .stat-box, .project-card, .contact-card {
     width: 90%;
     max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
