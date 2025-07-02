@@ -12,6 +12,7 @@ body {
   color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  zoom: 0.4;
 }
 
 /* Navigation */
@@ -210,6 +211,10 @@ spline-viewer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  body {
+    zoom: 0.4;
+  }
+
   nav {
     flex-direction: column;
     gap: 1rem;
