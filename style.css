@@ -228,7 +228,6 @@ spline-viewer {
   border: 1px solid rgba(138, 43, 226, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
-  color: #8a2be2;
   text-align: center;
 }
 .contact-card:hover {
@@ -239,6 +238,9 @@ spline-viewer {
   font-size: 2.2rem;
   margin-bottom: 10px;
   color: #8a2be2;
+}
+.contact-card p {
+  color: #e0e0e0;
 }
 
 /* Responsive - الجوال */
