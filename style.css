@@ -11,6 +11,7 @@ body {
   background: linear-gradient(135deg, #0a0a1a, #121236);
   color: #fff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Navigation */
@@ -26,6 +27,7 @@ nav {
   align-items: center;
   z-index: 1000;
   border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+  flex-wrap: wrap;
 }
 .nav-logo {
   font-size: 1.8rem;
@@ -36,6 +38,8 @@ nav {
 .nav-links {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .nav-links a {
   color: #e0e0e0;
@@ -44,6 +48,17 @@ nav {
 }
 .nav-links a:hover {
   color: #fff;
+}
+
+/* General Section Styling */
+section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Container */
@@ -62,6 +77,7 @@ nav {
 .content {
   flex: 1 1 450px;
   max-width: 550px;
+  text-align: left;
 }
 .content h1 {
   font-size: 3rem;
@@ -104,17 +120,9 @@ spline-viewer {
   pointer-events: none;
 }
 
-/* Projects Section */
+/* Projects */
 #projects {
-  padding: 100px 20px;
-  text-align: center;
   background: linear-gradient(135deg, #121236, #0f0f2a);
-}
-#projects h2 {
-  font-size: 2.8rem;
-  color: #8a2be2;
-  margin-bottom: 40px;
-  word-wrap: break-word;
 }
 .projects-container {
   display: flex;
@@ -130,7 +138,6 @@ spline-viewer {
   box-shadow: 0 8px 16px rgba(138, 43, 226, 0.3);
   transition: transform 0.3s;
   color: #eee;
-  text-align: center;
 }
 .project-card:hover {
   transform: translateY(-8px);
@@ -138,31 +145,14 @@ spline-viewer {
 .project-card h3 {
   color: #b678ff;
 }
-.project-card p {
-  margin: 10px 0;
-  word-wrap: break-word;
-}
 .project-card a {
   color: #d0b3ff;
   text-decoration: underline;
-  word-wrap: break-word;
 }
 
-/* Quick Stats Section */
+/* Stats */
 #quick-stats {
-  min-height: 100vh;
-  padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: linear-gradient(135deg, #0f0f2a, #121236);
-  text-align: center;
-}
-#quick-stats h2 {
-  font-size: 2.8rem;
-  color: #b678ff;
-  margin-bottom: 40px;
-  word-wrap: break-word;
 }
 .stats-container {
   display: flex;
@@ -182,33 +172,11 @@ spline-viewer {
   border: 1px solid rgba(138, 43, 226, 0.2);
   box-shadow: 0 8px 16px rgba(138, 43, 226, 0.1);
   color: #d0b3ff;
-  text-align: center;
-}
-.stat-box h3 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-.stat-box p {
-  font-size: 1rem;
-  color: #e0e0e0;
-  margin: 0;
 }
 
-/* Contact Section */
+/* Contact */
 #contact {
-  min-height: 100vh;
-  padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: linear-gradient(135deg, #121236, #0f0f2a);
-  text-align: center;
-}
-#contact h2 {
-  font-size: 2.8rem;
-  color: #b678ff;
-  margin-bottom: 40px;
-  word-wrap: break-word;
 }
 .contact-cards {
   display: flex;
@@ -228,7 +196,7 @@ spline-viewer {
   border: 1px solid rgba(138, 43, 226, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
-  text-align: center;
+  color: #8a2be2;
 }
 .contact-card:hover {
   background: rgba(138, 43, 226, 0.12);
@@ -239,12 +207,20 @@ spline-viewer {
   margin-bottom: 10px;
   color: #8a2be2;
 }
-.contact-card p {
-  color: #e0e0e0;
-}
 
-/* Responsive - الجوال */
-@media (max-width: 480px) {
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .container {
     flex-direction: column;
     padding: 6rem 1rem 3rem;
@@ -255,17 +231,11 @@ spline-viewer {
   }
 
   .content h1 {
-    font-size: 1.8rem;
-  }
-
-  .content p {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .download-btn {
     width: 100%;
-    padding: 0.8rem;
-    display: block;
     margin: 0 auto;
   }
 
@@ -277,7 +247,6 @@ spline-viewer {
   .stats-container,
   .contact-cards {
     flex-direction: column;
-    gap: 20px;
     align-items: center;
   }
 
@@ -286,16 +255,5 @@ spline-viewer {
   .contact-card {
     width: 90%;
     max-width: 300px;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
