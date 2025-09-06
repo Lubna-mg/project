@@ -5,73 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lubna Alghamdi - Portfolio</title>
   <meta name="description" content="Portfolio of Lubna Alghamdi - AI & Data Analysis Specialist." />
+
+  <!-- مكتبات خارجية -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ملف التنسيقات -->
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-    h2 {
-      color: #a145ff;
-      font-weight: 700;
-      font-size: 2.5rem;
-      text-align: center;
-      text-shadow: 0 0 10px rgba(161, 69, 255, 0.4);
-      margin-bottom: 2.5rem;
-    }
-    .project-card h3,
-    .stat-box p,
-    .contact-card p {
-      font-family: 'Poppins', sans-serif;
-      color: #a145ff;
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .project-card:hover, .stat-box:hover, .contact-card:hover {
-      transform: scale(1.12) rotate(2deg);
-      transition: all 0.4s ease-in-out;
-      box-shadow: 0 12px 40px rgba(161, 69, 255, 0.6);
-      cursor: pointer;
-    }
-    .project-card, .stat-box, .contact-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .nav-links a {
-      position: relative;
-      transition: color 0.3s ease;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      height: 3px;
-      width: 0%;
-      background-color: #a145ff;
-      transition: width 0.4s ease-in-out;
-    }
-    .nav-links a:hover {
-      color: #a145ff;
-    }
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-    .stats-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2.5rem;
-      padding: 2rem;
-    }
-  </style>
 </head>
 <body>
 
+  <!-- شريط التنقل -->
   <nav>
     <div class="nav-logo">L G</div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -80,22 +28,29 @@
     </div>
   </nav>
 
-  <section class="container" id="about" data-aos="fade-up">
-    <div class="content">
-      <h1>Hello, I'm Lubna Alghamdi</h1>
-      <p>
-        A passionate computer science graduate with a love for turning data into meaningful solutions.
-        I specialize in AI, data analysis, and smart system design — always aiming to make technology more human-centered and impactful.
-      </p>
-      <div class="buttons">
-        <a href="assets/Lubna-Alghamdi-CV.pdf" download class="download-btn">Download CV</a>
-      </div>
+<!-- قسم التعريف -->
+<section class="container" id="about" data-aos="fade-up">
+  <div class="content">
+    <h1>Hello, I'm Lubna Alghamdi</h1>
+    <p>
+      A passionate computer science graduate with a love for turning data into meaningful solutions.
+      I specialize in AI, data analysis, and smart system design — always aiming to make technology more human-centered and impactful.
+    </p>
+    
+    <!-- زر تحميل السيرة الذاتية فقط -->
+    <div class="buttons">
+      <a href="https://drive.google.com/uc?export=download&id=11dQp2tn-awzgv1ETPYWP04MHv_axsUHM" class="download-btn" target="_blank">Download CV</a>
     </div>
-    <div class="viewer" data-aos="zoom-in">
-      <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
-    </div>
-  </section>
+  </div>
 
+  <!-- عرض النموذج الثلاثي الأبعاد -->
+  <div class="viewer" data-aos="zoom-in">
+    <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
+  </div>
+</section>
+
+
+  <!-- المشاريع -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects-container">
@@ -106,12 +61,13 @@
       </div>
       <div class="project-card" data-aos="flip-left">
         <h3>Diabetes Prediction</h3>
-        <p> predicts the probability of diabetes using a Random Forest model and Streamlit based on medical data.</p>
-        <a href="https://github.com/Lubna-mg/project-Diabetes-Prediction/tree/main">View on GitHub</a>
+        <p>Predicts the probability of diabetes using a Random Forest model and Streamlit based on medical data.</p>
+        <a href="https://github.com/Lubna-mg/project-Diabetes-Prediction/tree/main" target="_blank">View on GitHub</a>
       </div>
     </div>
   </section>
 
+  <!-- الإحصائيات -->
   <section id="quick-stats" data-aos="fade-up">
     <h2>Quick Stats</h2>
     <div class="stats-container">
@@ -134,6 +90,7 @@
     </div>
   </section>
 
+  <!-- التواصل -->
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <div class="contact-cards">
@@ -152,13 +109,19 @@
     </div>
   </section>
 
+  <!-- مكتبات و سكربتات -->
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1200,
-      once: false,
-      mirror: true
+    AOS.init({ duration: 1200, once: false, mirror: true });
+
+    // زر القائمة للجوال
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.style.display =
+        navLinks.style.display === "flex" ? "none" : "flex";
     });
   </script>
 </body>
