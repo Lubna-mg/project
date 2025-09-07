@@ -13,7 +13,30 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
   z-index:1000;border-bottom:1px solid rgba(138,43,226,.2)
 }
-.nav-logo{font-size:1.6rem;font-weight:700;color:#8a2be2;text-shadow:0 0 10px #8a2be2}
+
+
+.nav-logo img {
+  height: 40px;  
+  width: 40px;  
+  display: block;  
+  border-radius: 50%;  /* جعل الصورة دائرية */
+  filter: drop-shadow(0 0 6px #8a2be2); /* إضافة تأثير الظل */
+}
+
+@media (max-width:768px){
+  .nav-logo img {
+    height: 34px;  
+    width: 34px;
+  }
+}
+
+@media (max-width:480px){
+  .nav-logo img {
+    height: 30px;  
+    width: 30px;
+  }
+}
+
 .nav-links{display:flex;gap:1.5rem}
 .nav-links a{color:#e0e0e0;text-decoration:none;font-weight:500}
 .nav-links a:hover{color:#fff}
@@ -104,6 +127,7 @@ spline-viewer{width:100%;height:360px;pointer-events:none}
   .contact-card{width:128px;height:128px}
   .contact-card i{font-size:1.7rem}
   .contact-card p{font-size:.9rem}
+  .nav-logo img{height:34px}
 }
 
 @media (max-width:480px){
@@ -115,4 +139,5 @@ spline-viewer{width:100%;height:360px;pointer-events:none}
   .project-card{padding:14px;width:94%}
   .stat-box{width:132px;height:132px}
   .contact-card{width:120px;height:120px}
+  .nav-logo img{height:30px}
 }
