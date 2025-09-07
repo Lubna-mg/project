@@ -2,25 +2,21 @@
 <html lang="en" style="overflow-x: hidden;">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lubna Alghamdi - Portfolio</title>
   <meta name="description" content="Portfolio of Lubna Alghamdi - AI & Data Analysis Specialist." />
-
-  <!-- مكتبات خارجية -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- ملف التنسيقات -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- شريط التنقل -->
   <nav>
     <div class="nav-logo">L G</div>
-    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-    <div class="nav-links">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navLinks">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div id="navLinks" class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#quick-stats">Quick Stats</a>
@@ -28,100 +24,82 @@
     </div>
   </nav>
 
-<!-- قسم التعريف -->
-<section class="container" id="about" data-aos="fade-up">
-  <div class="content">
-    <h1>Hello, I'm Lubna Alghamdi</h1>
-    <p>
-      A passionate computer science graduate with a love for turning data into meaningful solutions.
-      I specialize in AI, data analysis, and smart system design — always aiming to make technology more human-centered and impactful.
-    </p>
-    
-    <!-- زر تحميل السيرة الذاتية فقط -->
-    <div class="buttons">
-      <a href="https://drive.google.com/uc?export=download&id=11dQp2tn-awzgv1ETPYWP04MHv_axsUHM" class="download-btn" target="_blank">Download CV</a>
+  <section class="container" id="about" data-aos="fade-up">
+    <div class="content">
+      <h1>Hello, I'm Lubna Alghamdi</h1>
+      <p>
+        A computer science graduate passionate about data analysis and artificial intelligence. My focus is on transforming complex data into actionable insights and exploring innovative approaches to solve real-world challenges. I’m always eager to learn, grow, and contribute to meaningful projects in this fast-evolving field.
+      </p>
+      <div class="buttons">
+        <a href="https://drive.google.com/uc?export=download&id=11dQp2tn-awzgv1ETPYWP04MHv_axsUHM" class="download-btn" target="_blank" rel="noopener">Download CV</a>
+      </div>
     </div>
-  </div>
+    <div class="viewer" data-aos="zoom-in">
+      <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
+    </div>
+  </section>
 
-  <!-- عرض النموذج الثلاثي الأبعاد -->
-  <div class="viewer" data-aos="zoom-in">
-    <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
-  </div>
-</section>
-
-
-  <!-- المشاريع -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects-container">
       <div class="project-card" data-aos="flip-left">
         <h3>بصيرة</h3>
         <p>An AI-based system for early autism diagnosis using eye-tracking.</p>
-        <a href="https://github.com/Lubna-mg/project-Basira" target="_blank">View on GitHub</a>
+        <a href="https://github.com/Lubna-mg/project-Basira" target="_blank" rel="noopener">View on GitHub</a>
       </div>
       <div class="project-card" data-aos="flip-left">
         <h3>Diabetes Prediction</h3>
         <p>Predicts the probability of diabetes using a Random Forest model and Streamlit based on medical data.</p>
-        <a href="https://github.com/Lubna-mg/project-Diabetes-Prediction/tree/main" target="_blank">View on GitHub</a>
+        <a href="https://github.com/Lubna-mg/project-Diabetes-Prediction/tree/main" target="_blank" rel="noopener">View on GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- الإحصائيات -->
   <section id="quick-stats" data-aos="fade-up">
     <h2>Quick Stats</h2>
     <div class="stats-container">
       <div class="stat-box" data-aos="zoom-in-up">
-        <h3>5+</h3>
-        <p>Projects</p>
+        <h3>5+</h3><p>Projects</p>
       </div>
       <div class="stat-box" data-aos="zoom-in-up">
-        <h3>3</h3>
-        <p>Certificates</p>
+        <h3>3</h3><p>Certificates</p>
       </div>
       <div class="stat-box" data-aos="zoom-in-up">
-        <h3>2</h3>
-        <p>Awards</p>
+        <h3>2</h3><p>Awards</p>
       </div>
       <div class="stat-box" data-aos="zoom-in-up">
-        <h3>10+</h3>
-        <p>Skills</p>
+        <h3>10+</h3><p>Skills</p>
       </div>
     </div>
   </section>
 
-  <!-- التواصل -->
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <div class="contact-cards">
-      <div class="contact-card" data-aos="zoom-in">
-        <a href="mailto:lubna.mg@hotmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:lubna.mg@hotmail.com" class="contact-card" data-aos="zoom-in">
+        <i class="fas fa-envelope"></i>
         <p>Email</p>
-      </div>
-      <div class="contact-card" data-aos="zoom-in">
-        <a href="https://www.linkedin.com/in/lubna-al-ghamdi-16150b29b" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </a>
+      <a href="https://www.linkedin.com/in/lubna-al-ghamdi-16150b29b" target="_blank" class="contact-card" data-aos="zoom-in">
+        <i class="fab fa-linkedin"></i>
         <p>LinkedIn</p>
-      </div>
-      <div class="contact-card" data-aos="zoom-in">
-        <a href="https://github.com/Lubna-mg" target="_blank"><i class="fab fa-github"></i></a>
+      </a>
+      <a href="https://github.com/Lubna-mg" target="_blank" class="contact-card" data-aos="zoom-in">
+        <i class="fab fa-github"></i>
         <p>GitHub</p>
-      </div>
+      </a>
     </div>
   </section>
 
-  <!-- مكتبات و سكربتات -->
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1200, once: false, mirror: true });
-
-    // زر القائمة للجوال
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    toggle.addEventListener("click", () => {
-      navLinks.style.display =
-        navLinks.style.display === "flex" ? "none" : "flex";
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
     });
   </script>
 </body>

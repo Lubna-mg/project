@@ -1,7 +1,4 @@
-/* Reset */
 *{ margin:0; padding:0; box-sizing:border-box; }
-
-/* Body */
 html,body{ max-width:100%; }
 body{
   font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
@@ -10,9 +7,9 @@ body{
   overflow-x:hidden;
 }
 
-/* Navigation */
 nav{
   position:fixed; top:0; left:0; right:0;
+  height:80px;
   padding:1.25rem 1.5rem;
   background:rgba(10,10,30,.8);
   backdrop-filter: blur(10px);
@@ -27,29 +24,24 @@ nav{
 .nav-links{ display:flex; gap:2rem; }
 .nav-links a{ color:#e0e0e0; text-decoration:none; font-weight:500; }
 .nav-links a:hover{ color:#fff; }
-
 .menu-toggle{
-  display:none; /* يظهر فقط على الشاشات الصغيرة */
+  display:none;
   background:transparent; border:0; color:#e0e0e0;
   font-size:1.4rem; cursor:pointer;
 }
 
-/* يسمح بالتمرير الصحيح إلى الأقسام خلف nav ثابت */
 section{ scroll-margin-top: 90px; }
 
-/* Container (Hero) */
 .container{
   display:flex;
   justify-content:space-between;
   align-items:center;
   flex-wrap:wrap;
   gap:2rem;
-  padding:6rem 2rem 5rem; /* قاع أكبر قليلاً */
+  padding:8rem 2rem 5rem;
   max-width:1200px;
   margin:auto;
 }
-
-/* Content */
 .content{ flex:1 1 450px; max-width:550px; }
 .content h1{
   font-size:3rem;
@@ -71,11 +63,9 @@ section{ scroll-margin-top: 90px; }
 }
 .download-btn:hover{ transform:translateY(-2px); box-shadow:0 6px 20px rgba(138,43,226,.6); }
 
-/* Viewer */
 .viewer{ flex:1 1 450px; max-width:500px; }
 spline-viewer{ width:100%; height:400px; pointer-events:none; }
 
-/* Sections */
 #projects, #quick-stats, #contact{
   padding:60px 20px;
   min-height:auto;
@@ -85,7 +75,6 @@ spline-viewer{ width:100%; height:400px; pointer-events:none; }
   font-size:2.8rem; color:#8a2be2; margin-bottom:30px;
 }
 
-/* Projects */
 .projects-container{
   display:flex; flex-wrap:wrap; justify-content:center; gap:30px;
 }
@@ -100,7 +89,6 @@ spline-viewer{ width:100%; height:400px; pointer-events:none; }
 .project-card p{ margin:10px 0; }
 .project-card a{ color:#d0b3ff; text-decoration:underline; }
 
-/* Quick Stats */
 .stats-container{ display:flex; justify-content:center; gap:30px; flex-wrap:wrap; }
 .stat-box{
   width:180px; height:180px;
@@ -111,7 +99,6 @@ spline-viewer{ width:100%; height:400px; pointer-events:none; }
   color:#d0b3ff; text-align:center;
 }
 
-/* Contact */
 #contact{
   min-height:auto;
   padding:60px 20px;
@@ -125,21 +112,28 @@ spline-viewer{ width:100%; height:400px; pointer-events:none; }
   background:rgba(138,43,226,.05);
   display:flex; flex-direction:column; justify-content:center; align-items:center;
   border:1px solid rgba(138,43,226,.2);
-  transition:all .3s ease; cursor:pointer; text-align:center;
+  transition:all .3s ease;
+  text-align:center;
+  text-decoration:none;
+  color:inherit;
+  cursor:pointer;
 }
-.contact-card a, .contact-card a i{
-  color:#8a2be2; text-decoration:none; transition:color .3s ease;
+.contact-card:hover{
+  background:rgba(138,43,226,.1);
+  transform:translateY(-4px);
 }
-.contact-card a:hover i{ color:#b678ff; }
-.contact-card i{ font-size:2.2rem; margin-bottom:10px; }
+.contact-card i{
+  font-size:2.2rem;
+  margin-bottom:10px;
+  color:#8a2be2;
+  transition:color .3s ease;
+}
+.contact-card:hover i{ color:#b678ff; }
 .contact-card p{ color:#e0e0e0; margin:0; }
 
-/* ========== Responsive ========== */
 @media (max-width: 768px){
-  nav{ padding:1rem 1.25rem; }
+  nav{ padding:1rem 1.25rem; height:auto; }
   .menu-toggle{ display:inline-flex; align-items:center; justify-content:center; }
-
-  /* الروابط تكون مخفية افتراضيًا على الموبايل وتظهر عند فتح القائمة */
   .nav-links{
     display:none;
     width:100%;
@@ -147,21 +141,18 @@ spline-viewer{ width:100%; height:400px; pointer-events:none; }
     padding-top:.5rem;
   }
   .nav-links.open{ display:flex; }
-
-  .container{ flex-direction:column; align-items:center; gap:1.5rem; padding:4rem 1rem 4.5rem; }
+  .container{ flex-direction:column; align-items:center; gap:1.5rem; padding:7rem 1rem 4.5rem; }
   .content{ text-align:center; }
   .content h1{ font-size:2rem; }
   .content p{ font-size:1rem; }
   .download-btn{ width:100%; padding:.9rem; display:block; margin:0 auto 20px; }
   spline-viewer{ height:320px; }
-
   .projects-container, .stats-container, .contact-cards{
     flex-direction:column; gap:20px; align-items:center;
   }
   .project-card, .stat-box, .contact-card{ width:90%; max-width:300px; }
 }
 
-/* موبايل صغير جداً */
 @media (max-width: 480px){
   .content h1{ font-size:1.8rem; }
   spline-viewer{ height:300px; }
