@@ -34,30 +34,56 @@
       </p>
       <div class="buttons">
         <a href="CV/Lubna_Alghamdi_CV.pdf" class="download-btn" target="_blank" rel="noopener">Download CV</a>
-
       </div>
     </div>
+
     <div class="viewer" data-aos="zoom-in">
       <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
+
     <div class="projects-container">
+
+      <!-- Project 1 -->
       <div class="project-card" data-aos="flip-left">
         <h3>بصيرة</h3>
         <p>An AI-based system for early autism diagnosis using eye-tracking.</p>
         <a href="https://github.com/Lubna-mg/project-Basira" target="_blank" rel="noopener">View on GitHub</a>
       </div>
+
+      <!-- Project 2 -->
       <div class="project-card" data-aos="flip-left">
         <h3>Diabetes Prediction</h3>
         <p>Predicts the probability of diabetes using a Random Forest model and Streamlit based on medical data.</p>
         <a href="https://github.com/Lubna-mg/project-Diabetes-Prediction/tree/main" target="_blank" rel="noopener">View on GitHub</a>
       </div>
+
+      <!-- Project 3 (New) -->
+      <div class="project-card" data-aos="flip-left">
+        <h3> Power BI | Flower Sales Dashboard 2024</h3>
+        <p>Interactive Power BI dashboard analyzing flower sales performance, trends, and insights for 2024.</p>
+        <a href="https://github.com/Lubna-mg/Flower-Sales-Dashboard-2024-Power-BI" target="_blank" rel="noopener">
+          View on GitHub
+        </a>
+      </div>
+
+      <!-- Project 4 (New) -->
+      <div class="project-card" data-aos="flip-left">
+        <h3> Power BI |Saudi Establishments Dashboard 2023</h3>
+        <p>Data analysis dashboard built with Power BI to explore Saudi business establishments distribution and trends in 2023.</p>
+        <a href="https://github.com/Lubna-mg/Saudi-Establishments-Dashboard-2023-Power-BI" target="_blank" rel="noopener">
+          View on GitHub
+        </a>
+      </div>
+
     </div>
   </section>
 
+  <!-- QUICK STATS -->
   <section id="quick-stats" data-aos="fade-up">
     <h2>Quick Stats</h2>
     <div class="stats-container">
@@ -76,6 +102,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <div class="contact-cards">
@@ -98,8 +125,10 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1200, once: false, mirror: true });
+
     const toggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+
     toggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen);
